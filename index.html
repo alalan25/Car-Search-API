@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <link rel="shortcut icon" href="/car.ico" type="image/x-icon">
+    <link rel="icon" href="/car.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CAR SEARCH</title>
+            <link rel="stylesheet" type="text/css" href="app.css">
+       </head>
+<body>
+    <div class="header">
+    <h1>CAR Search API</h1> <!--Page header-->
+    </div>
+
+    <div class="animated-text">
+        <span>Find your <!--Transitions to one sentence-->
+                automobile.</span> 
+      </div>
+  </div>
+
+    <p class="data-input"> <!--User input-->
+        Manufacturer: <input type = "text" id ="make"></input>
+        Model: <input type = "text" id ="model"></input>
+        City:  <select name="Select1" size="1" id="city">
+                <option value="">- Please select a city -</option>
+                <option value="NYC">New York</option>
+                <option value="JC">Junction City</option>
+                <option value="LA">Las Vegas</option>
+                <option value="HU">Houston</option>
+                
+                </select>
+        Year: <input type = "number" id ="year"></input>
+        
+        <br/>
+        <button id= "submit" onclick="displayResult()">Search</button> <!--Data to be displayed under here-->
+    </p>
+    <h2>Here are your results:</h2>
+    <ul id="cars">
+        </ul>
+        <br/>
+        <button id= "refresh" onclick="location.reload();">Clear</button>
+</body>
+<script src="app.js"></script>
+</html>

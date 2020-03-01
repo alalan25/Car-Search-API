@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300'); /*import google font*/
+
+body {
+display: flex;
+flex-direction: column;
+  text-align:center;
+  background-image: linear-gradient(to right, #8e9eab , #eef2f3);
+  color:#555;
+  font-family:'Roboto';
+  overflow:hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+} /* styling properties for landing page */
+
+/*start header and subtext styling*/
+
+body h1{ 
+    font-size: 8.4vh;
+    transition: 1s;
+}
+
+body h1:hover{
+    transform: scale(1.1);
+    transition: 1s;
+    font-weight: 600;
+}
+
+.animated-text{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+}
+/*end header and subtext styling*/
+
+/*start user-input styling*/
+body .data-input{
+    margin-top: 8vh;
+}
+
+input, select, option{
+    border-color: transparent;
+    margin: 1vh;
+}
+/*end user-input styling*/
+
+/*start button(s) styling*/
+
+#submit{
+    border: none;
+    padding: 1vh;
+    margin-top: 4vh;
+    border-radius: 10px;
+    color: #555;
+    transition: 1s;
+    width: 8vh;
+}
+#cars{
+    color: black;
+}
+
+#submit:hover{
+    background: #555;
+    color: white;
+    transition: 1s;
+    transform: scale(1.1);
+}
+
+#refresh{
+    border: none;
+    padding: 1vh;
+    margin-top: 4vh;
+    border-radius: 10px;
+    color: #555;
+    transition: 1s;
+    width: 8vh;
+    margin: auto;
+}
+
+#refresh:hover{
+    background: #555;
+    color: white;
+    transition: 1s;
+    transform: scale(1.1);
+}
+
+/*end button(s) styling*/
+
+/*start sliding animation section*/
+
+div { 
+    display:inline-block;
+    overflow:hidden;
+    white-space:nowrap;
+  }
+  
+  div:first-of-type {   
+    animation: showup 10s infinite;
+  
+  }
+  
+  div:last-of-type {
+    width:0px;
+    animation: reveal 10s infinite;
+  
+  
+  }
+  
+  div:last-of-type span {
+    margin-left:-355px;
+    animation: slidein 10s infinite;
+  }
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:355px;}
+    80% {opacity:1;}
+    100% {opacity:0;width:355px;}
+}
+
+/*end sliding animation section*/
+
+
